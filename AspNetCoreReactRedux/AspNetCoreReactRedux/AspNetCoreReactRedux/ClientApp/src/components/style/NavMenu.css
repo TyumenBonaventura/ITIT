@@ -1,0 +1,45 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a.navbar-brand:visited, a.navbar-brand:hover {
+        color: white;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.navbar {
+    background: rgba(34, 37, 38, 1);
+    z-index: 10;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-link {
+    color: white;
+}
+
+aside nav {
+    background: rgba(34, 37, 38, 1);
+}
+
+aside li:hover {
+    background: #CDDC39; 
+}
+
+

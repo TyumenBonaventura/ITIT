@@ -1,0 +1,34 @@
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.deps.json
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.dll
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.pdb
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\DataAccessLibrary.dll
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\DataAccessLibrary.pdb
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csprojAssemblyReference.cache
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csproj.CoreCompileInputs.cache
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.AssemblyInfoInputs.cache
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.AssemblyInfo.cs
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csproj.CopyComplete
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.dll
+F:\VS2019Projects\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.pdb
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.deps.json
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.dll
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.pdb
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\DataAccessLibrary.dll
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\DataAccessLibrary.pdb
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csprojAssemblyReference.cache
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.AssemblyInfoInputs.cache
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.AssemblyInfo.cs
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csproj.CopyComplete
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.dll
+C:\Users\opero\Downloads\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.pdb
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.deps.json
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.dll
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\BusinessLibrary.pdb
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\DataAccessLibrary.dll
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\bin\Debug\netcoreapp2.2\DataAccessLibrary.pdb
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csprojAssemblyReference.cache
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.AssemblyInfoInputs.cache
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.AssemblyInfo.cs
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.csproj.CopyComplete
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.dll
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\AspNetCoreReactRedux\AspNetCoreReactRedux\BusinessLibrary\obj\Debug\netcoreapp2.2\BusinessLibrary.pdb
