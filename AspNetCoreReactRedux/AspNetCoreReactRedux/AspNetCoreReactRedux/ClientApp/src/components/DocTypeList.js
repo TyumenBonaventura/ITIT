@@ -8,6 +8,9 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Growl } from 'primereact/growl';
 import { actionCreators } from '../store/DocType';
+import { ExportCSV } from './ExportCSV';
+
+
 
 class DocTypeList extends Component {
 
@@ -79,13 +82,17 @@ class DocTypeList extends Component {
         let header = <div className="p-clearfix" style={{ lineHeight: '1.87em' }}>Типы документов </div>;
 
         let footer = <div className="p-clearfix" style={{ width: '100%' }}>
-            <Button style={{ float: 'left' }} label="Добавить" icon="pi pi-plus" onClick={this.addNew} />
+            <Button style={{ float: 'left' }} label="Добавить" onClick={this.addNew} />
+            <span>&nbsp;&nbsp;</span>
+            <span>&nbsp;&nbsp;</span>
+            <span>&nbsp;&nbsp;</span>
+            <ExportCSV csvData={this.props.doctype} fileName={'Типы документов'} />
         </div>;
 
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
-            <Button label="Закрыть" icon="pi pi-times" onClick={this.dialogHide} />
-            <Button label="Удалить" disabled={this.newDocType ? true : false}  icon="pi pi-times" onClick={this.delete} />
-            <Button label="Сохранить" icon="pi pi-check" onClick={this.save} />
+            <Button label="Закрыть" onClick={this.dialogHide} />
+            <Button label="Удалить" disabled={this.newDocType ? true : false} onClick={this.delete} />
+            <Button label="Сохранить" onClick={this.save} />
         </div>;
 
         return (
@@ -100,7 +107,6 @@ class DocTypeList extends Component {
                         this.state.doctype &&
 
                         <div className="p-grid p-fluid">
-                            
                             <div><label htmlFor="name">Наименование</label></div>
                             <div>
                                 <InputText id="name" onChange={(e) => { this.updateProperty('name', e.target.value) }} value={this.state.doctype.Name} />

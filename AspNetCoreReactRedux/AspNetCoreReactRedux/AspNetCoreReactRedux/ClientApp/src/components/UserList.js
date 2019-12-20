@@ -95,13 +95,13 @@ class UserList extends Component {
         let header = <div className="p-clearfix" style={{ lineHeight: '1.87em' }}>Клиенты </div>;
 
         let footer = <div className="p-clearfix" style={{ width: '100%' }}>
-            <Button style={{ float: 'left' }} label="Добавить" icon="pi pi-plus" onClick={this.addNew} />
+            <Button style={{ float: 'left' }} label="Добавить" onClick={this.addNew} />
         </div>;
 
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
-            <Button label="Закрыть" icon="pi pi-times" onClick={this.dialogHide} />
-            <Button label="Удалить" disabled={this.newUser ? true : false}  icon="pi pi-times" onClick={this.delete} />
-            <Button label="Сохранить" icon="pi pi-check" onClick={this.save} />
+            <Button label="Закрыть" onClick={this.dialogHide} />
+            <Button label="Удалить" disabled={this.newUser ? true : false} onClick={this.delete} />
+            <Button label="Сохранить" onClick={this.save} />
         </div>;
 
         return (
