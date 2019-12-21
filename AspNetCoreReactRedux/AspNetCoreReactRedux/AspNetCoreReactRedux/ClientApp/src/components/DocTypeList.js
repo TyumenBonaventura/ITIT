@@ -11,7 +11,6 @@ import { actionCreators } from '../store/DocType';
 import { ExportCSV } from './ExportCSV';
 
 
-
 class DocTypeList extends Component {
 
     constructor() {
@@ -29,7 +28,7 @@ class DocTypeList extends Component {
     }
 
     componentDidUpdate() {
-        // This method is called when the route parameters change
+        // Этот метод вызывается при изменении параметров маршрута
         if (this.props.forceReload) {
             this.fetchData();
         }
@@ -60,7 +59,7 @@ class DocTypeList extends Component {
     addNew() {
         this.newDocType = true;
         this.setState({
-            doctype: { name: ''/*, lastName: '', email: '', phone: ''*/ },
+            doctype: { name: '' },
             displayDialog: true
         });
     }
@@ -79,37 +78,37 @@ class DocTypeList extends Component {
 
     render() {
 
-        let header = <div className="p-clearfix" style={{ lineHeight: '1.87em' }}>Типы документов </div>;
-
-        let footer = <div className="p-clearfix" style={{ width: '100%' }}>
-            <Button style={{ float: 'left' }} label="Добавить" onClick={this.addNew} />
-            <span>&nbsp;&nbsp;</span>
-            <span>&nbsp;&nbsp;</span>
-            <span>&nbsp;&nbsp;</span>
+        let header = <div className="p-clearfix" style={{ width: '100%' }}>
+            <Button style={{ background: 'rgba(0, 170, 204, 1)', float: 'left' }} label="Добавить" onClick={this.addNew} />
             <ExportCSV csvData={this.props.doctype} fileName={'Типы документов'} />
         </div>;
 
+        let dialogHeader = <div className="ui-dialog-buttonpane p-clearfix">
+            <p style={{ float: 'left' }}>Тип документа</p>
+            <Button style={{ float: 'right' }} className="p-button-danger" label="X" onClick={this.dialogHide}/>
+        </div>;
+
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
-            <Button label="Закрыть" onClick={this.dialogHide} />
-            <Button label="Удалить" disabled={this.newDocType ? true : false} onClick={this.delete} />
-            <Button label="Сохранить" onClick={this.save} />
+            <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
+            <Button style={{ background: 'rgba(242, 12, 108, 1)' }} label="Удалить" disabled={this.newDocType ? true : false} onClick={this.delete} />
         </div>;
 
         return (
             <div>
                 <Growl ref={(el) => this.growl = el} />
-                <DataTable value={this.props.doctype} selectionMode="single" header={header} footer={footer} selection={this.state.selectedDocType} onSelectionChange={e => this.setState({ selectedDocType: e.value })} onRowSelect={this.onDocTypeSelect}>
+                <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Типы документов</h2>
+                <DataTable value={this.props.doctype} selectionMode="single" header={header} selection={this.state.selectedDocType} onSelectionChange={e => this.setState({ selectedDocType: e.value })} onRowSelect={this.onDocTypeSelect}>
                     <Column field="docTypeId" header="ID" />
                     <Column field="name" header="Наименование" />
                 </DataTable>
-                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Тип документа" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
+                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header={dialogHeader} modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
                         this.state.doctype &&
 
                         <div className="p-grid p-fluid">
                             <div><label htmlFor="name">Наименование</label></div>
                             <div>
-                                <InputText id="name" onChange={(e) => { this.updateProperty('name', e.target.value) }} value={this.state.doctype.Name} />
+                                <InputText id="name" onChange={(e) => { this.updateProperty('name', e.target.value) }} value={this.state.doctype.name} />
                             </div>
 
                         </div>
@@ -120,7 +119,7 @@ class DocTypeList extends Component {
     }
 }
 
-// Make doctype array available in  props
+// Make doctype array available in props 
 function mapStateToProps(state) {
     return {
         doctype: state.doctype.doctype,

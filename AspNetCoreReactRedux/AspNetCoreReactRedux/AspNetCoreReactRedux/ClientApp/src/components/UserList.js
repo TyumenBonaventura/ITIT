@@ -6,9 +6,9 @@ import { Column } from 'primereact/column';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
-import { Growl } from 'primereact/growl';import { Dropdown } from 'primereact/dropdown';
-//import { Dropdown } from 'react-native-material-dropdown';
+import { Growl } from 'primereact/growl';
 import { actionCreators } from '../store/User';
+import { ExportCSV } from './ExportCSV';
 
 class UserList extends Component {
 
@@ -31,7 +31,7 @@ class UserList extends Component {
     }
 
     componentDidUpdate() {
-        // This method is called when the route parameters change
+        // Этот метод вызывается при изменении параметров маршрута
         if (this.props.forceReload) {
             this.fetchDataUser();
             this.fetchDataRole();
@@ -90,24 +90,26 @@ class UserList extends Component {
 
     render() {
 
-        
+        let header = <div className="p-clearfix" style={{ width: '100%' }}>
+            <Button style={{ background: 'rgba(0, 170, 204, 1)', float: 'left' }} label="Добавить" onClick={this.addNew} />
+            <ExportCSV csvData={this.props.user} fileName={'Клиенты'} />
+        </div>;
 
-        let header = <div className="p-clearfix" style={{ lineHeight: '1.87em' }}>Клиенты </div>;
-
-        let footer = <div className="p-clearfix" style={{ width: '100%' }}>
-            <Button style={{ float: 'left' }} label="Добавить" onClick={this.addNew} />
+        let dialogHeader = <div className="ui-dialog-buttonpane p-clearfix">
+            <p style={{ float: 'left' }}>Клиент</p>
+            <Button style={{ float: 'right' }} className="p-button-danger" label="X" onClick={this.dialogHide} />
         </div>;
 
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
-            <Button label="Закрыть" onClick={this.dialogHide} />
-            <Button label="Удалить" disabled={this.newUser ? true : false} onClick={this.delete} />
-            <Button label="Сохранить" onClick={this.save} />
+            <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
+            <Button style={{ background: 'rgba(242, 12, 108, 1)' }} label="Удалить" disabled={this.newUser ? true : false} onClick={this.delete} />
         </div>;
 
         return (
             <div>
                 <Growl ref={(el) => this.growl = el} />
-                <DataTable value={this.props.user} selectionMode="single" header={header} footer={footer} selection={this.state.selectedUser} onSelectionChange={e => this.setState({ selectedUser: e.value })} onRowSelect={this.onUserSelect}>
+                <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Клиенты</h2>
+                <DataTable value={this.props.user} selectionMode="single" header={header} selection={this.state.selectedUser} onSelectionChange={e => this.setState({ selectedUser: e.value })} onRowSelect={this.onUserSelect}>
                     <Column field="userId" header="ID" />
                     <Column field="fio" header="ФИО" />
                     <Column field="roleId" header="Роль в системе" />
@@ -115,7 +117,7 @@ class UserList extends Component {
                     <Column field="login" header="Логин" />
                     <Column field="passwordHash" header="Пароль" />
                 </DataTable>
-                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Клиент" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
+                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header={dialogHeader} modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
                         
                         this.state.user && this.state.role &&
@@ -128,7 +130,7 @@ class UserList extends Component {
                             </div>
                             <div><label htmlFor="role">Роль</label></div>
                             <select onChange={(e) => { this.updateProperty('roleId', e.target.value) }} value={this.state.user.roleId}>
-                                <option value="">-- Select Role --</option>
+                                <option value="">-- Выбрать роль --</option>
                                 {this.props.role.map(role =>
                                     <option key={role.roleId} value={role.roleId}>{role.name}</option>
                                 )}

@@ -18,6 +18,6 @@ export const ExportCSV = ({ csvData, fileName }) => {
     }
 
     return (
-        <Button style={{ float: 'right' }} label="Экспорт в xlsx" onClick={(e) => exportToCSV(csvData, fileName)} />
+        <Button style={{ background: 'rgba(0, 170, 204, 1)', float: 'right' }} label="Экспорт в xlsx" onClick={(e) => exportToCSV(csvData, fileName)} />
     )
 }

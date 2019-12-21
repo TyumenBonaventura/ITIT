@@ -5,7 +5,8 @@ import DocTypeList from './components/DocTypeList';
 import UserList from './components/UserList';
 
 export default () => (
-  <Layout>
+    <Layout>
+        <Route exact path='/' component={DocTypeList} />
         <Route exact path='/doctypes' component={DocTypeList} />
         <Route exact path='/users' component={UserList} />
   </Layout>

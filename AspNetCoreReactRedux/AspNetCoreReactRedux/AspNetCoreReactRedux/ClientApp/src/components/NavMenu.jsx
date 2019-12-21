@@ -30,13 +30,10 @@ export default class NavMenu extends React.Component {
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" light >
                     <Container>
                             <MenuIcon id="menuIcon" onClick={() => { this.toggle() }} />
-                            <span>&nbsp;&nbsp;</span>
-                            <span>&nbsp;&nbsp;</span>
-                            <span>&nbsp;&nbsp;</span>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             <img width="45px" height="45px" src="https://i.ibb.co/d0jFBnb/2019-06-12-21-42-05.png" />
-                            <span>&nbsp;&nbsp;</span>
+                            <span>&nbsp;</span>
                          <NavbarBrand onClick={() => this.setState({ showNav: false })} tag={Link} to="/">SnowMaster</NavbarBrand>
-                        <NavbarToggler className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" /*isOpen={this.state.isOpen}*/ navbar>
                         </Collapse>
                     </Container>
@@ -47,8 +44,8 @@ export default class NavMenu extends React.Component {
                     onHideNav={() => this.setState({ showNav: false })}
                     title=" "
                     items={[
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Clients</NavLink>,
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Document types</NavLink>,    
+                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Клиенты</NavLink>,
+                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,    
                     ]}
                     navStyle={{ backgroundColor: '#222526', maxWidth: '235px' }}
                     itemStyle={{ backgroundColor: '#222526', color: 'FFFFFF', listStyleType: 'none'}}

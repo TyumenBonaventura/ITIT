@@ -4,8 +4,12 @@
   word-break: break-all;
 }
 
-a.navbar-brand:visited, a.navbar-brand:hover {
-        color: white;
+.navbar-light .navbar-brand:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+    color: white;
 }
 
 html {
@@ -40,6 +44,10 @@ aside nav {
 
 aside li:hover {
     background: #CDDC39; 
+}
+
+aside ul {
+    display:unset;
 }
 
 
