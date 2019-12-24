@@ -10,7 +10,7 @@ import { Growl } from 'primereact/growl';
 import { actionCreators } from '../store/User';
 import { ExportCSV } from './ExportCSV';
 
-class UserList extends Component {
+class UserPage extends Component {
 
     constructor() {
         super();
@@ -156,7 +156,7 @@ class UserList extends Component {
     }
 }
 
-// Make user array available in  props
+// Делает массив user доступным в props
 function mapStateToProps(state) {
     return {
         user: state.user.user,
@@ -172,4 +172,4 @@ function mapStateToProps(state) {
 export default connect(
     mapStateToProps,
     dispatch => bindActionCreators(actionCreators, dispatch)
-)(UserList);
+)(UserPage);

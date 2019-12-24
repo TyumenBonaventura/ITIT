@@ -36,3 +36,4 @@ C:\Users\opero\OneDrive\Study\7 семестр\Средства реализац
 C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\ITIT\AspNetCoreReactRedux\AspNetCoreReactRedux\DataAccessLibrary\obj\Debug\netcoreapp2.2\DataAccessLibrary.AssemblyInfo.cs
 C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\ITIT\AspNetCoreReactRedux\AspNetCoreReactRedux\DataAccessLibrary\obj\Debug\netcoreapp2.2\DataAccessLibrary.dll
 C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\ITIT\AspNetCoreReactRedux\AspNetCoreReactRedux\DataAccessLibrary\obj\Debug\netcoreapp2.2\DataAccessLibrary.pdb
+C:\Users\opero\OneDrive\Study\7 семестр\Средства реализации ИТ\ITIT\AspNetCoreReactRedux\AspNetCoreReactRedux\DataAccessLibrary\obj\Debug\netcoreapp2.2\DataAccessLibrary.csprojAssemblyReference.cache

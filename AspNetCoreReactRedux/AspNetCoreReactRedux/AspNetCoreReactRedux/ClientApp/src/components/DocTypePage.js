@@ -11,7 +11,7 @@ import { actionCreators } from '../store/DocType';
 import { ExportCSV } from './ExportCSV';
 
 
-class DocTypeList extends Component {
+class DocTypePage extends Component {
 
     constructor() {
         super();
@@ -119,7 +119,7 @@ class DocTypeList extends Component {
     }
 }
 
-// Make doctype array available in props 
+// Делает массив doctype доступным в props
 function mapStateToProps(state) {
     return {
         doctype: state.doctype.doctype,
@@ -132,4 +132,4 @@ function mapStateToProps(state) {
 export default connect(
     mapStateToProps,
     dispatch => bindActionCreators(actionCreators, dispatch)
-)(DocTypeList);
+)(DocTypePage);

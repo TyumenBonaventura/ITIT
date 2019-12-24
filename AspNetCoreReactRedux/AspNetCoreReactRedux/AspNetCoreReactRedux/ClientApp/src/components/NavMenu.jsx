@@ -12,7 +12,7 @@ export default class NavMenu extends React.Component {
         this.toggle = this.toggle.bind(this);
         this.state = {
           //  isOpen: false,
-            showNav: false,
+            showNav: true,
          //   onHideNav: true
         };
     }
@@ -45,7 +45,10 @@ export default class NavMenu extends React.Component {
                     title=" "
                     items={[
                         <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Клиенты</NavLink>,
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,    
+                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,
+                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/equipmenttypes">Типы инвентаря</NavLink>,
+                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/agecategories">Возрастные категории</NavLink>,
+                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>, 
                     ]}
                     navStyle={{ backgroundColor: '#222526', maxWidth: '235px' }}
                     itemStyle={{ backgroundColor: '#222526', color: 'FFFFFF', listStyleType: 'none'}}
