@@ -6,7 +6,7 @@ namespace BusinessLibrary.Service
 {
     public interface IRoleService
     {
-        Task<List<DocTypeModel>> GetRoles();
+        Task<List<RoleModel>> GetRoles();
         Task<bool> SaveRole(RoleModel role);
         Task<bool> DeleteRole(int roleId);
     }

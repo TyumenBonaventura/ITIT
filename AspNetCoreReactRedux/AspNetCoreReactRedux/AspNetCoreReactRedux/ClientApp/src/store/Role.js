@@ -5,13 +5,6 @@
     forceReload: false
 }
 
-const initialStateRole = {
-    role: [],
-    loading: false,
-    errors: {},
-    forceReload: false
-}
-
 export const actionCreators = {
     requestRole: () => async (dispatch, getState) => {
 

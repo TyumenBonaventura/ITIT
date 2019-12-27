@@ -62,9 +62,9 @@ namespace BusinessLibrary.Service
             }
         }
 
-        Task<List<DocTypeModel>> IRoleService.GetRoles()
+    /*    Task<List<DocTypeModel>> IRoleService.GetRoles()
         {
             throw new System.NotImplementedException();
-        }
+        }*/
     }
 }

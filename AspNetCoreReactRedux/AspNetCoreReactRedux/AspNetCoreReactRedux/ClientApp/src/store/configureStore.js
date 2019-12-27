@@ -6,6 +6,8 @@ import * as User from './User';
 import * as EquipmentType from './EquipmentType';
 import * as AgeCategory from './AgeCategory';
 import * as Gender from './Gender';
+import * as Role from './Role';
+import * as ReservationStatus from './ReservationStatus';
 
 export default function configureStore (history, initialState) {
   const reducers = {
@@ -14,6 +16,8 @@ export default function configureStore (history, initialState) {
       equipmenttype: EquipmentType.reducer,
       agecategory: AgeCategory.reducer,
       gender: Gender.reducer,
+      role: Role.reducer,
+      reservationstatus: ReservationStatus.reducer,
   };
 
   const middleware = [

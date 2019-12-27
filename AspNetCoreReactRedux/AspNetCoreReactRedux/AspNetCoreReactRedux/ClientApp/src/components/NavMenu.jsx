@@ -44,14 +44,16 @@ export default class NavMenu extends React.Component {
                     onHideNav={() => this.setState({ showNav: false })}
                     title=" "
                     items={[
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Клиенты</NavLink>,
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/equipmenttypes">Типы инвентаря</NavLink>,
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/agecategories">Возрастные категории</NavLink>,
-                        <NavLink onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>, 
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Клиенты</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/equipment_types">Типы инвентаря</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/age_categories">Возрастные категории</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>, 
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/role">Роль в системе</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation_status">Статус бронирования</NavLink>, 
                     ]}
                     navStyle={{ backgroundColor: '#222526', maxWidth: '235px' }}
-                    itemStyle={{ backgroundColor: '#222526', color: 'FFFFFF', listStyleType: 'none'}}
+                    itemStyle={{ backgroundColor: '#222526', color: 'FFFFFF', listStyleType: 'none', padding: '5px' }}
                     itemHoverStyle={{ backgroundColor: '#CDDC39', width: '100%' }}
                 />
             </React.Fragment>

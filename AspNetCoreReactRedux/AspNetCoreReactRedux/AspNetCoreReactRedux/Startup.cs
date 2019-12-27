@@ -21,6 +21,7 @@ namespace AspNetCoreReactRedux
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IReservationStatusService, ReservationStatusService>();
             services.AddTransient<IGenderService, GenderService>();
             services.AddTransient<IAgeCategoryService, AgeCategoryService>();
             services.AddTransient<IEquipmentTypeService, EquipmentTypeService>();
