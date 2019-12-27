@@ -8,6 +8,8 @@ import AgeCategoryPage from './components/AgeCategoryPage';
 import GenderPage from './components/GenderPage';
 import RolePage from './components/RolePage';
 import ReservationStatusPage from './components/ReservationStatusPage';
+import DayOfWeekPage from './components/DayOfWeekPage';
+import RatePage from './components/RatePage';
 
 export default () => (
     <Layout>
@@ -19,5 +21,7 @@ export default () => (
         <Route exact path='/gender' component={GenderPage} />
         <Route exact path='/role' component={RolePage} />
         <Route exact path='/reservation_status' component={ReservationStatusPage} />
+        <Route exact path='/day_of_week' component={DayOfWeekPage} />
+        <Route exact path='/rate' component={RatePage} />
     </Layout>
 );

@@ -86,35 +86,5 @@ namespace BusinessLibrary.Service
                               }).ToListAsync();
             }
         }
-
-    /*    Task<List<UserModel>> IUserService.GetUsers()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<bool> IUserService.SaveUser(UserModel user)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        Task<bool> IUserService.DeleteUser(int userId)
-        {
-            throw new System.NotImplementedException();
-        }*/
-
-    /*    Task<List<UserModel>> IUserService.GetRoles()
-        {
-            throw new System.NotImplementedException();
-        }*/
-
-        /*   public Task<bool> UserType(UserModel user)
-           {
-               throw new System.NotImplementedException();
-           }*/
-
-        /*     Task<List<RoleModel>> IUserService.GetRoles()
-             {
-                 throw new System.NotImplementedException();
-             }*/
     }
 }

@@ -7,7 +7,9 @@ import * as EquipmentType from './EquipmentType';
 import * as AgeCategory from './AgeCategory';
 import * as Gender from './Gender';
 import * as Role from './Role';
+import * as Rate from './Rate';
 import * as ReservationStatus from './ReservationStatus';
+import * as DayOfWeek from './DayOfWeek';
 
 export default function configureStore (history, initialState) {
   const reducers = {
@@ -18,6 +20,8 @@ export default function configureStore (history, initialState) {
       gender: Gender.reducer,
       role: Role.reducer,
       reservationstatus: ReservationStatus.reducer,
+      dayofweek: DayOfWeek.reducer,
+      rate: Rate.reducer,
   };
 
   const middleware = [
@@ -25,7 +29,6 @@ export default function configureStore (history, initialState) {
     routerMiddleware(history)
   ];
 
-  // In development, use the browser's Redux dev tools extension if installed
   const enhancers = [];
   const isDevelopment = process.env.NODE_ENV === 'development';
   if (isDevelopment && typeof window !== 'undefined' && window.devToolsExtension) {
