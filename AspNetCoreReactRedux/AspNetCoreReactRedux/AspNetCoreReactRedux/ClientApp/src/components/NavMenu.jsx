@@ -45,14 +45,15 @@ export default class NavMenu extends React.Component {
                     title=" "
                     items={[
                         <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Клиенты</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation">Бронирования</NavLink>,
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/rate">Тарифы</NavLink>,
                         <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,
                         <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/equipment_types">Типы инвентаря</NavLink>,
                         <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/age_categories">Возрастные категории</NavLink>,
-                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>, 
-                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/role">Роль в системе</NavLink>,
                         <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation_status">Статус бронирования</NavLink>, 
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/role">Роль пользователя в системе</NavLink>,
                         <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/day_of_week">День недели</NavLink>,
-                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/rate">Тарифы</NavLink>, 
+                        <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>,
                     ]}
                     navStyle={{ backgroundColor: '#222526', maxWidth: '235px' }}
                     itemStyle={{ backgroundColor: '#222526', color: 'FFFFFF', listStyleType: 'none', padding: '5px' }}

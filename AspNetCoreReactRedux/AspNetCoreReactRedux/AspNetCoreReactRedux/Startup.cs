@@ -21,6 +21,7 @@ namespace AspNetCoreReactRedux
         // Этот метод вызывается средой выполнения. Используется для добавления служб в контейнер.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IReservationService, ReservationService>();
             services.AddTransient<IRateService, RateService>();
             services.AddTransient<IDayOfWeekService, DayOfWeekService>();
             services.AddTransient<IReservationStatusService, ReservationStatusService>();

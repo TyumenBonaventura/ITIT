@@ -84,11 +84,6 @@ class ReservationStatusPage extends Component {
             <ExportCSV csvData={this.props.reservationstatus} fileName={'Статусы бронирования'} />
         </div>;
 
-        let dialogHeader = <div className="ui-dialog-buttonpane p-clearfix">
-            <p style={{ float: 'left' }}>Статус бронирования</p>
-            <Button style={{ float: 'right' }} className="p-button-danger" label="X" onClick={this.dialogHide}/>
-        </div>;
-
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
             <Button style={{ background: 'rgba(242, 12, 108, 1)' }} label="Удалить" disabled={this.newReservationStatus ? true : false} onClick={this.delete} />
@@ -103,7 +98,7 @@ class ReservationStatusPage extends Component {
                     <Column field="name" header="Наименование" />
                     <Column field="comment" header="Комментарий" />
                 </DataTable>
-                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header={dialogHeader} modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
+                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Статус бронирования" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
                         this.state.reservationstatus &&
 

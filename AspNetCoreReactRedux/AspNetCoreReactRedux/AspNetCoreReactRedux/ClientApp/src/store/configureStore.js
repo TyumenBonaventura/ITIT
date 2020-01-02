@@ -9,6 +9,7 @@ import * as Gender from './Gender';
 import * as Role from './Role';
 import * as Rate from './Rate';
 import * as ReservationStatus from './ReservationStatus';
+import * as Reservation from './Reservation';
 import * as DayOfWeek from './DayOfWeek';
 
 export default function configureStore (history, initialState) {
@@ -22,6 +23,7 @@ export default function configureStore (history, initialState) {
       reservationstatus: ReservationStatus.reducer,
       dayofweek: DayOfWeek.reducer,
       rate: Rate.reducer,
+      reservation: Reservation.reducer,
   };
 
   const middleware = [

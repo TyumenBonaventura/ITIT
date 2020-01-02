@@ -1,6 +1,9 @@
 ﻿import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Dialog } from 'primereact/dialog';
@@ -74,8 +77,6 @@ class RatePage extends Component {
     addNew() {
         this.newRate = true;
         this.setState({
-         //   rate: { fio: '', roleId: '', photo: '', login: '', passwordHash: '' },
-        //    role: { roleId: '', name: '' },
             rate: { dayOfWeekId: '', price: '', equipmentTypeId: '' },
             dayofweek: { dayOfWeekId: '', name: '' },
             equipmenttype: { equipmentTypeId: '', name: '' },
@@ -102,11 +103,6 @@ class RatePage extends Component {
             <ExportCSV csvData={this.props.rate} fileName={'Тарифы'} />
         </div>;
 
-        let dialogHeader = <div className="ui-dialog-buttonpane p-clearfix">
-            <p style={{ float: 'left' }}>Тариф</p>
-            <Button style={{ float: 'right' }} className="p-button-danger" label="X" onClick={this.dialogHide} />
-        </div>;
-
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
             <Button style={{ background: 'rgba(242, 12, 108, 1)' }} label="Удалить" disabled={this.newRate ? true : false} onClick={this.delete} />
@@ -116,13 +112,13 @@ class RatePage extends Component {
             <div>
                 <Growl ref={(el) => this.growl = el} />
                 <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Тарифы</h2>
-                <DataTable value={this.props.rate} selectionMode="single" header={header} selection={this.state.selectedRate} onSelectionChange={e => this.setState({ selectedRate: e.value })} onRowSelect={this.onRateSelect}>
+                <DataTable value={this.props.rate} selectionMode="single" header={header} selection={this.state.selectedRate} onSelectionChange={e => this.setState({ selectedRate: e.value })} onRowSelect={this.onRateSelect} paginator={true} rows={10} rowsPerPageOptions={[5, 10, 20]}>
                     <Column field="rateId" header="ID" />
                     <Column field="equipmentTypeId" header="Тип инвентаря" />
                     <Column field="dayOfWeekId" header="День недели" />
                     <Column field="price" header="Цена" />
                 </DataTable>
-                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header={dialogHeader} modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
+                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Тариф" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
                         
                         this.state.rate && this.state.dayofweek && this.state.equipmenttype &&

@@ -1,6 +1,9 @@
 ﻿import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Dialog } from 'primereact/dialog';
@@ -90,26 +93,24 @@ class UserPage extends Component {
 
     render() {
 
+        let paginatorLeft = <Button icon="pi pi-refresh" />;
+        let paginatorRight = <Button icon="pi pi-cloud-upload" />;
+
         let header = <div className="p-clearfix" style={{ width: '100%' }}>
             <Button style={{ background: 'rgba(0, 170, 204, 1)', float: 'left' }} label="Добавить" onClick={this.addNew} />
             <ExportCSV csvData={this.props.user} fileName={'Клиенты'} />
-        </div>;
-
-        let dialogHeader = <div className="ui-dialog-buttonpane p-clearfix">
-            <p style={{ float: 'left' }}>Клиент</p>
-            <Button style={{ float: 'right' }} className="p-button-danger" label="X" onClick={this.dialogHide} />
         </div>;
 
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
             <Button style={{ background: 'rgba(242, 12, 108, 1)' }} label="Удалить" disabled={this.newUser ? true : false} onClick={this.delete} />
         </div>;
-
+        /*<Column key={this.props.user.roleId} field={this.props.role.name} header="Роль в системе" />*/
         return (
             <div>
                 <Growl ref={(el) => this.growl = el} />
                 <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Клиенты</h2>
-                <DataTable value={this.props.user} selectionMode="single" header={header} selection={this.state.selectedUser} onSelectionChange={e => this.setState({ selectedUser: e.value })} onRowSelect={this.onUserSelect}>
+                <DataTable value={this.props.user} selectionMode="single" header={header} selection={this.state.selectedUser} onSelectionChange={e => this.setState({ selectedUser: e.value })} onRowSelect={this.onUserSelect} paginator={true} rows={10} rowsPerPageOptions={[5, 10, 20]}>
                     <Column field="userId" header="ID" />
                     <Column field="fio" header="ФИО" />
                     <Column field="roleId" header="Роль в системе" />
@@ -117,7 +118,7 @@ class UserPage extends Component {
                     <Column field="login" header="Логин" />
                     <Column field="passwordHash" header="Пароль" />
                 </DataTable>
-                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header={dialogHeader} modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
+                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Клиент" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
                         
                         this.state.user && this.state.role &&

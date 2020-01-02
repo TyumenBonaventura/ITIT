@@ -83,11 +83,6 @@ class RolePage extends Component {
             <ExportCSV csvData={this.props.role} fileName={'Роли пользователей'} />
         </div>;
 
-        let dialogHeader = <div className="ui-dialog-buttonpane p-clearfix">
-            <p style={{ float: 'left' }}>Роль пользователя</p>
-            <Button style={{ float: 'right' }} className="p-button-danger" label="X" onClick={this.dialogHide}/>
-        </div>;
-
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
             <Button style={{ background: 'rgba(242, 12, 108, 1)' }} label="Удалить" disabled={this.newRole ? true : false} onClick={this.delete} />
@@ -101,7 +96,7 @@ class RolePage extends Component {
                     <Column field="roleId" header="ID" />
                     <Column field="name" header="Наименование" />
                 </DataTable>
-                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header={dialogHeader} modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
+                <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Роль пользователя" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
                         this.state.role &&
 
