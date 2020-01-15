@@ -3621,11 +3621,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
       "projectName": "DataAccessLibrary",
-      "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
+      "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
       "packagesPath": "C:\\Users\\opero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\obj\\",
+      "outputPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

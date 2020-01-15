@@ -1,17 +1,65 @@
-import React from 'react';
-import styled from 'styled-components';
-const GridWrapper = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  margin-top: 1em;
-  margin-left: 6em;
-  margin-right: 6em;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(25px, auto);
-`;
-export const Home = (props) => (
-    <GridWrapper>
-        <p>This is a paragraph and I am writing on the home page</p>
-        <p>This is another paragraph, hi hey hello whatsup yo</p>
-    </GridWrapper>
-)
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { withAuth } from '@okta/okta-react';
+
+export default withAuth(
+  class Home extends Component {
+    state = { authenticated: null };
+
+    checkAuthentication = async () => {
+      const authenticated = await this.props.auth.isAuthenticated();
+      if (authenticated !== this.state.authenticated) {
+        this.setState({ authenticated });
+      }
+    };
+
+    async componentDidMount() {
+      this.checkAuthentication();
+    }
+
+    async componentDidUpdate() {
+      this.checkAuthentication();
+    }
+
+    login = async () => {
+      this.props.auth.login('/');
+    };
+
+    logout = async () => {
+      this.props.auth.logout('/');
+    };
+
+    render() {
+      if (this.state.authenticated === null) return null;
+
+      const mainContent = this.state.authenticated ? (
+        <div>
+          <p className="lead">
+            You have entered the staff portal,{' '}
+            <Link to="/staff">click here</Link>
+          </p>
+          <button className="btn btn-light btn-lg" onClick={this.logout}>
+            Logout
+          </button>
+        </div>
+      ) : (
+        <div>
+          <p className="lead">
+            If you are a staff member, please get your credentials from your
+            supervisor
+          </p>
+          <button className="btn btn-dark btn-lg" onClick={this.login}>
+            Login
+          </button>
+        </div>
+      );
+
+      return (
+        <div className="jumbotron">
+          <h1 className="display-4">Acme Staff Portal</h1>
+          {mainContent}
+        </div>
+      );
+    }
+  }
+);

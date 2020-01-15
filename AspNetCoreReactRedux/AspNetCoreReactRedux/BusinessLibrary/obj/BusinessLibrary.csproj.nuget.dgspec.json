@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj": {}
+    "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj": {
+    "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj",
         "projectName": "BusinessLibrary",
-        "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj",
+        "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\BusinessLibrary.csproj",
         "packagesPath": "C:\\Users\\opero\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\obj\\",
+        "outputPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\BusinessLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj": {
-                "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj"
+              "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj": {
+                "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj": {
+    "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
         "projectName": "DataAccessLibrary",
-        "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
+        "projectPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\DataAccessLibrary.csproj",
         "packagesPath": "C:\\Users\\opero\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\obj\\",
+        "outputPath": "C:\\Users\\opero\\OneDrive\\Study\\7 семестр\\Средства реализации ИТ\\ITIT (test Okta)\\ITIT\\AspNetCoreReactRedux\\AspNetCoreReactRedux\\DataAccessLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

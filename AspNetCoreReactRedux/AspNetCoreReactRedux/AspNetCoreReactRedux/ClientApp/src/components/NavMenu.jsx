@@ -34,8 +34,13 @@ export default class NavMenu extends React.Component {
                             <img width="45px" height="45px" src="https://i.ibb.co/d0jFBnb/2019-06-12-21-42-05.png" />
                             <span>&nbsp;</span>
                          <NavbarBrand onClick={() => this.setState({ showNav: false })} tag={Link} to="/">SnowMaster</NavbarBrand>
-                        <Collapse className="d-sm-inline-flex flex-sm-row-reverse" /*isOpen={this.state.isOpen}*/ navbar>
-                        </Collapse>
+                            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" /*isOpen={this.state.isOpen}*/ navbar>
+                                <ul className="navbar-nav flex-grow">
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-dark" to="/">Contact</NavLink>
+                                    </NavItem>
+                                </ul>
+                            </Collapse>
                     </Container>
                 </Navbar>
             </header>

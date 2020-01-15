@@ -1,6 +1,9 @@
-import React from 'react';
-import { Route } from 'react-router';
+import React, { Component } from 'react';
+// import { Route } from 'react-router';
+import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import Login from './components/auth/Login';
 import DocTypePage from './components/DocTypePage';
 import UserPage from './components/UserPage';
 import EquipmentTypePage from './components/EquipmentTypePage';
@@ -11,19 +14,48 @@ import ReservationStatusPage from './components/ReservationStatusPage';
 import DayOfWeekPage from './components/DayOfWeekPage';
 import RatePage from './components/RatePage';
 import ReservationPage from './components/ReservationPage';
+import Home from './components/Home';
+import Staff from './components/Staff';
+import './App.css';
+
+function onAuthRequired({ history }) {
+  history.push('/login');
+}
 
 export default () => (
-    <Layout>
-        <Route exact path='/' component={DocTypePage} />
-        <Route exact path='/doctypes' component={DocTypePage} />
-        <Route exact path='/users' component={UserPage} />
-        <Route exact path='/equipment_types' component={EquipmentTypePage} />
-        <Route exact path='/age_categories' component={AgeCategoryPage} />
-        <Route exact path='/gender' component={GenderPage} />
-        <Route exact path='/role' component={RolePage} />
-        <Route exact path='/reservation_status' component={ReservationStatusPage} />
-        <Route exact path='/day_of_week' component={DayOfWeekPage} />
-        <Route exact path='/rate' component={RatePage} />
-        <Route exact path='/reservation' component={ReservationPage} />
-    </Layout>
+    <Router>
+        <Security issuer='https://yandexitit2019.okta.com/oauth2/default'
+          client_id='0oat8nwjeNviWnqmn4x5'
+          redirect_uri={window.location.origin + '/implicit/callback'}
+          onAuthRequired={onAuthRequired}
+        >
+        <Layout>
+           
+            <Route
+                path="/login"
+                render={() => (
+                        <Login baseUrl='https://yandexitit2019.okta.com' />
+                    )}
+            />
+
+            <SecureRoute path="/" exact={true} component={Home} />
+            <SecureRoute path="/staff" exact={true} component={Staff} />
+            <SecureRoute exact={true} path='/doctypes' component={DocTypePage} />
+            <SecureRoute exact={true} path='/users' component={UserPage} />
+            <SecureRoute exact={true} path='/equipment_types' component={EquipmentTypePage} />
+            <SecureRoute exact={true} path='/age_categories' component={AgeCategoryPage} />
+            <SecureRoute exact={true} path='/gender' component={GenderPage} />
+            <SecureRoute exact={true} path='/role' component={RolePage} />
+            <SecureRoute exact={true} path='/reservation_status' component={ReservationStatusPage} />
+            <SecureRoute exact={true} path='/day_of_week' component={DayOfWeekPage} />
+            <SecureRoute exact={true} path='/rate' component={RatePage} />
+            <SecureRoute exact={true} path='/reservation' component={ReservationPage} />
+            <Route path='/implicit/callback' component={ImplicitCallback} />
+        </Layout>
+
+
+
+        </Security>
+    </Router>
 );
+

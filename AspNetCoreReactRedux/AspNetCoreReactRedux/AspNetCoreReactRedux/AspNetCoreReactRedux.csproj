@@ -26,7 +26,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\..\..\..\ITIT %2528test Okta%2529\ITIT\AspNetCoreReactRedux\AspNetCoreReactRedux\AspNetCoreReactRedux\ClientApp\src\components\auth\Login.js" />
+    <None Include="..\..\..\..\..\ITIT %2528test Okta%2529\ITIT\AspNetCoreReactRedux\AspNetCoreReactRedux\AspNetCoreReactRedux\ClientApp\src\components\auth\SignInWidget.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\components\pages\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
@@ -53,5 +62,7 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties clientapp_4package_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
