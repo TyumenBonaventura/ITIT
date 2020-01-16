@@ -29,29 +29,27 @@ export default () => (
           redirect_uri={window.location.origin + '/implicit/callback'}
           onAuthRequired={onAuthRequired}
         >
-        <Layout>
-           
             <Route
                 path="/login"
                 render={() => (
-                        <Login baseUrl='https://yandexitit2019.okta.com' />
-                    )}
+                    <Login baseUrl='https://yandexitit2019.okta.com' />
+                )}
             />
-
-            <SecureRoute path="/" exact={true} component={Home} />
-            <SecureRoute path="/staff" exact={true} component={Staff} />
-            <SecureRoute exact={true} path='/doctypes' component={DocTypePage} />
-            <SecureRoute exact={true} path='/users' component={UserPage} />
-            <SecureRoute exact={true} path='/equipment_types' component={EquipmentTypePage} />
-            <SecureRoute exact={true} path='/age_categories' component={AgeCategoryPage} />
-            <SecureRoute exact={true} path='/gender' component={GenderPage} />
-            <SecureRoute exact={true} path='/role' component={RolePage} />
-            <SecureRoute exact={true} path='/reservation_status' component={ReservationStatusPage} />
-            <SecureRoute exact={true} path='/day_of_week' component={DayOfWeekPage} />
-            <SecureRoute exact={true} path='/rate' component={RatePage} />
-            <SecureRoute exact={true} path='/reservation' component={ReservationPage} />
-            <Route path='/implicit/callback' component={ImplicitCallback} />
-        </Layout>
+            <Layout>
+                <SecureRoute path="/" exact={true} component={Home} />
+                <SecureRoute path="/staff" exact={true} component={Staff} />
+                <SecureRoute exact={true} path='/doctypes' component={DocTypePage} />
+                <SecureRoute exact={true} path='/users' component={UserPage} />
+                <SecureRoute exact={true} path='/equipment_types' component={EquipmentTypePage} />
+                <SecureRoute exact={true} path='/age_categories' component={AgeCategoryPage} />
+                <SecureRoute exact={true} path='/gender' component={GenderPage} />
+                <SecureRoute exact={true} path='/role' component={RolePage} />
+                <SecureRoute exact={true} path='/reservation_status' component={ReservationStatusPage} />
+                <SecureRoute exact={true} path='/day_of_week' component={DayOfWeekPage} />
+                <SecureRoute exact={true} path='/rate' component={RatePage} />
+                <SecureRoute exact={true} path='/reservation' component={ReservationPage} />
+                <Route path='/implicit/callback' component={ImplicitCallback} />
+            </Layout>
 
 
 

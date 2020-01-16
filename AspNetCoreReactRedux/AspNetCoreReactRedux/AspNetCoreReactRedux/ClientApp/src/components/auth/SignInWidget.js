@@ -11,6 +11,7 @@ class SignInWidget extends Component {
       baseUrl: this.props.baseUrl,
       logo: 'logo.png'
     });
+
     this.widget.renderEl({ el }, this.props.onSuccess, this.props.onError);
   }
 

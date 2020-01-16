@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import SignInWidget from './SignInWidget';
 import { withAuth } from '@okta/okta-react';
+import './Login.css';
 
 export default withAuth(
 
@@ -38,13 +39,15 @@ export default withAuth(
     render() {
       if (this.state.authenticated === null) return null;
       return this.state.authenticated ? (
-        <Redirect to={{ pathname: '/' }} />
+        <Redirect to={{ pathname: '/home' }} />
       ) : (
+        <body>
         <SignInWidget
           baseUrl={this.props.baseUrl}
           onSuccess={this.onSuccess}
           onError={this.onError}
         />
+        </body>
       );
     }
   }
