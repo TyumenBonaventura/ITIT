@@ -38,16 +38,18 @@ export default withAuth(
 
     render() {
       if (this.state.authenticated === null) return null;
-      return this.state.authenticated ? (
+        return this.state.authenticated ? (
         <Redirect to={{ pathname: '/home' }} />
-      ) : (
-        <body>
+        ) : (
+        <React.Fragment>
+        <style>{'body { background: url(bckgrnd.jpg) no-repeat; background-size: 100%; }'}</style>
+        
         <SignInWidget
           baseUrl={this.props.baseUrl}
           onSuccess={this.onSuccess}
           onError={this.onError}
         />
-        </body>
+        </React.Fragment>
       );
     }
   }
