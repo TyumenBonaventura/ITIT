@@ -39,7 +39,7 @@ export default withAuth(
     render() {
       if (this.state.authenticated === null) return null;
         return this.state.authenticated ? (
-        <Redirect to={{ pathname: '/home' }} />
+        <Redirect to={{ pathname: '/' }} />
         ) : (
         <React.Fragment>
         <style>{'body { background: url(bckgrnd.jpg) no-repeat; background-size: 100%; }'}</style>

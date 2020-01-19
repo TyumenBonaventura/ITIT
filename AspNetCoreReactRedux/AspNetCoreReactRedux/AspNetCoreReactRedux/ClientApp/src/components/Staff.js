@@ -19,9 +19,9 @@ class Staff extends Component {
 
     return (
       <div>
-        <h1>Welcome {currentUserName}</h1>
+        <h2>Администратор: {currentUserName}</h2>
         <p>Email: {currentUserEmail}</p>
-        <p>You have reached the authorized staff area of the portal</p>
+        <p>Вы успешно авторизовались в информационной системе проката спортивного инвентаря SnowMaster.</p>
       </div>
     );
   }

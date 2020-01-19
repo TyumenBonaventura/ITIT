@@ -1,8 +1,24 @@
 import React from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import {
+    Collapse,
+    Container,
+    Navbar,
+    NavbarText,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+} from 'reactstrap';
+import Staff from './Staff';
 import { Link } from 'react-router-dom';
 import SideNav, { MenuIcon } from 'react-simple-sidenav';
 import { withAuth } from '@okta/okta-react';
+import 'bootstrap/dist/css/bootstrap.css';
 import './style/NavMenu.css';
 import './style/SideMenu.css';
 
@@ -13,21 +29,23 @@ export default withAuth(
 
             this.toggle = this.toggle.bind(this);
             this.state = {
-              //  isOpen: false,
+                //  isOpen: false,
                 showNav: true,
-             //   onHideNav: true
+                authenticated: null,
+                currentUserName: 'admin',
+                //   onHideNav: true
             };
         }
         toggle() {
             this.setState({
                 showNav: !this.state.showNav,
-             //   onHideNav: !this.state.onHideNav
+                //   onHideNav: !this.state.onHideNav
             });
         }
-        state = { authenticated: null };
 
         checkAuthentication = async () => {
             const authenticated = await this.props.auth.isAuthenticated();
+            
             if (authenticated !== this.state.authenticated) {
                 this.setState({ authenticated });
             }
@@ -35,10 +53,12 @@ export default withAuth(
 
         async componentDidMount() {
             this.checkAuthentication();
+
         }
 
         async componentDidUpdate() {
             this.checkAuthentication();
+
         }
 
         login = async () => {
@@ -50,9 +70,12 @@ export default withAuth(
         };
         render() {
 
+            const { currentUserName } = this.state;
+
             if (this.state.authenticated === null) return null;
 
             const loginLogoutButton = this.state.authenticated ? (
+
                 <React.Fragment>
                     <meta charset="UTF-8"></meta>
                     <header>
@@ -64,11 +87,16 @@ export default withAuth(
                                 <span>&nbsp;</span>
                                 <NavbarBrand onClick={() => this.setState({ showNav: false })} tag={Link} to="/">SnowMaster</NavbarBrand>
                                 <Collapse className="d-sm-inline-flex flex-sm-row-reverse" /*isOpen={this.state.isOpen}*/ navbar>
-                                    <ul className="navbar-nav flex-grow">
-                                        <NavItem>
-                                            <NavLink tag={Link} className="text-light" onClick={this.logout} to="/">Выйти</NavLink>
-                                        </NavItem>
-                                    </ul>
+                                    <UncontrolledDropdown className="navbar-nav flex-grow" nav inNavbar>
+                                        <DropdownToggle nav caret>
+                                            <span className="text-light">{currentUserName}&nbsp;</span>
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>
+                                                <NavLink tag={Link} onClick={this.logout} to="/">Выход</NavLink>
+                                            </DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
                                 </Collapse>
                             </Container>
                         </Navbar>

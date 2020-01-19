@@ -36,8 +36,8 @@ export default () => (
                 )}
             />
             <Layout>
-                <SecureRoute path="/" exact={true} component={Home} />
-                <SecureRoute path="/staff" exact={true} component={Staff} />
+                <SecureRoute path="/home" exact={true} component={Home} />
+                <SecureRoute path="/" exact={true} component={Staff} />
                 <SecureRoute exact={true} path='/doctypes' component={DocTypePage} />
                 <SecureRoute exact={true} path='/users' component={UserPage} />
                 <SecureRoute exact={true} path='/equipment_types' component={EquipmentTypePage} />
