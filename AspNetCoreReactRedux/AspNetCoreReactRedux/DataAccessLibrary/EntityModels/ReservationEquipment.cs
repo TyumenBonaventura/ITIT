@@ -5,6 +5,7 @@ namespace DataAccessLibrary.EntityModels
 {
     public partial class ReservationEquipment
     {
+        public int ReservationEquipmentId { get; set; }
         public int ReservationId { get; set; }
         public int EquipmentId { get; set; }
         public int Amount { get; set; }

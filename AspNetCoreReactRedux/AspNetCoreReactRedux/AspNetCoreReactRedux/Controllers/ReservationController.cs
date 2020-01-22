@@ -17,7 +17,7 @@ namespace AspNetCoreReactRedux.Controllers
 
         [HttpGet]
         [Route("Reservation")]
-        public new async Task<IActionResult> Reservation() 
+        public async Task<IActionResult> Reservation() 
         {
             return Ok(await _reservationService.GetReservations());
         }

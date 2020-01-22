@@ -8,7 +8,7 @@ import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
 import { Growl } from 'primereact/growl';
-import { actionCreators } from '../store/ReservationStatus';
+import { actionCreators } from '../store/ReservationStatus.js';
 import { ExportCSV } from './ExportCSV';
 
 

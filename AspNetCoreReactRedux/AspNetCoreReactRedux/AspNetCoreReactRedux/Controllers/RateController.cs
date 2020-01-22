@@ -17,7 +17,7 @@ namespace AspNetCoreReactRedux.Controllers
 
         [HttpGet]
         [Route("Rate")]
-        public new async Task<IActionResult> Rate() 
+        public async Task<IActionResult> Rate() 
         {
             return Ok(await _rateService.GetRates());
         }

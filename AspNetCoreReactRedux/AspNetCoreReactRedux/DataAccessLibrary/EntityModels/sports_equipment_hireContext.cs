@@ -36,8 +36,7 @@ namespace DataAccessLibrary.EntityModels
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-CRGN3IK;Initial Catalog=sports_equipment_hire;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
-        /*Data Source=DESKTOP-CRGN3IK;Initial Catalog=sports_equipment_hire;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False*/
-     /*   Server=tcp:sports-equipment-hire-dbserver.database.windows.net,1433;Initial Catalog = sports_equipment_hire_db; Persist Security Info=False;User ID = adm1n; Password=IT!t2019;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30;*/
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
@@ -172,24 +171,21 @@ namespace DataAccessLibrary.EntityModels
 
             modelBuilder.Entity<ReservationEquipment>(entity =>
             {
-                entity.HasKey(e => new { e.ReservationId, e.EquipmentId })
-                    .HasName("PK_Reservation_Equipment");
+                entity.Property(e => e.EquipmentId).HasColumnName("Equipment_Id");
 
                 entity.Property(e => e.ReservationId).HasColumnName("Reservation_Id");
-
-                entity.Property(e => e.EquipmentId).HasColumnName("Equipment_Id");
 
                 entity.HasOne(d => d.Equipment)
                     .WithMany(p => p.ReservationEquipment)
                     .HasForeignKey(d => d.EquipmentId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Reservation_Equipment_Equipment");
+                    .HasConstraintName("FK_ReservationEquipment_Equipment");
 
                 entity.HasOne(d => d.Reservation)
                     .WithMany(p => p.ReservationEquipment)
                     .HasForeignKey(d => d.ReservationId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Reservation_Equipment_Reservation");
+                    .HasConstraintName("FK_ReservationEquipment_Reservation");
             });
 
             modelBuilder.Entity<ReservationStatus>(entity =>
@@ -226,7 +222,6 @@ namespace DataAccessLibrary.EntityModels
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.User)
                     .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_User_Role");
             });
         }

@@ -18,7 +18,6 @@ namespace DataAccessLibrary.EntityModels
         public int GenderId { get; set; }
         public int AgeCategoryId { get; set; }
         public string Photo { get; set; }
-        public bool? Hidden { get; set; }
 
         public virtual AgeCategory AgeCategory { get; set; }
         public virtual EquipmentType EquipmentType { get; set; }

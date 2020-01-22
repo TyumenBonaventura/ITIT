@@ -10,7 +10,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Growl } from 'primereact/growl';
-import { actionCreators } from '../store/User';
+import { actionCreators } from '../store/User.js';
 import { ExportCSV } from './ExportCSV';
 
 class UserPage extends Component {

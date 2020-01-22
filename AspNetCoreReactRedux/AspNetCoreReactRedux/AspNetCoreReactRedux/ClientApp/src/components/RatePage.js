@@ -10,7 +10,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Growl } from 'primereact/growl';
-import { actionCreators } from '../store/Rate';
+import { actionCreators } from '../store/Rate.js';
 import { ExportCSV } from './ExportCSV';
 
 class RatePage extends Component {

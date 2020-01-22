@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import Login from './components/auth/Login';
 import DocTypePage from './components/DocTypePage';
 import UserPage from './components/UserPage';
+import EquipmentPage from './components/EquipmentPage';
 import EquipmentTypePage from './components/EquipmentTypePage';
 import AgeCategoryPage from './components/AgeCategoryPage';
 import GenderPage from './components/GenderPage';
@@ -14,6 +15,7 @@ import ReservationStatusPage from './components/ReservationStatusPage';
 import DayOfWeekPage from './components/DayOfWeekPage';
 import RatePage from './components/RatePage';
 import ReservationPage from './components/ReservationPage';
+import ReservationEquipmentPage from './components/ReservationEquipmentPage';
 import Home from './components/Home';
 import Staff from './components/Staff';
 import './App.css';
@@ -40,6 +42,7 @@ export default () => (
                 <SecureRoute path="/" exact={true} component={Staff} />
                 <SecureRoute exact={true} path='/doctypes' component={DocTypePage} />
                 <SecureRoute exact={true} path='/users' component={UserPage} />
+                <SecureRoute exact={true} path='/equipment' component={EquipmentPage} />
                 <SecureRoute exact={true} path='/equipment_types' component={EquipmentTypePage} />
                 <SecureRoute exact={true} path='/age_categories' component={AgeCategoryPage} />
                 <SecureRoute exact={true} path='/gender' component={GenderPage} />
@@ -48,6 +51,7 @@ export default () => (
                 <SecureRoute exact={true} path='/day_of_week' component={DayOfWeekPage} />
                 <SecureRoute exact={true} path='/rate' component={RatePage} />
                 <SecureRoute exact={true} path='/reservation' component={ReservationPage} />
+                <SecureRoute exact={true} path='/reservation_equipment' component={ReservationEquipmentPage} />
                 <Route path='/implicit/callback' component={ImplicitCallback} />
             </Layout>
 

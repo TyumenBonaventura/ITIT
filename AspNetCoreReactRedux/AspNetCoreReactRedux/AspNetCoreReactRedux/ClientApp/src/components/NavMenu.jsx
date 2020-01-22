@@ -14,7 +14,6 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
-import Staff from './Staff';
 import { Link } from 'react-router-dom';
 import SideNav, { MenuIcon } from 'react-simple-sidenav';
 import { withAuth } from '@okta/okta-react';
@@ -107,6 +106,7 @@ export default withAuth(
                         title=" "
                         items={[
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/users">Клиенты</NavLink>,
+                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/equipment">Инвентарь</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation">Бронирования</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/rate">Тарифы</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,
@@ -116,6 +116,7 @@ export default withAuth(
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/role">Роль пользователя в системе</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/day_of_week">День недели</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>,
+                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation_equipment">БронированиеИнвентарь</NavLink>,
                         ]}
                         navStyle={{ backgroundColor: '#222526', maxWidth: '235px' }}
                         itemStyle={{ backgroundColor: '#222526', color: 'FFFFFF', listStyleType: 'none', padding: '5px' }}

@@ -24,9 +24,11 @@ namespace AspNetCoreReactRedux
             services.AddTransient<IReservationService, ReservationService>();
             services.AddTransient<IRateService, RateService>();
             services.AddTransient<IDayOfWeekService, DayOfWeekService>();
+            services.AddTransient<IReservationEquipmentService, ReservationEquipmentService>();
             services.AddTransient<IReservationStatusService, ReservationStatusService>();
             services.AddTransient<IGenderService, GenderService>();
             services.AddTransient<IAgeCategoryService, AgeCategoryService>();
+            services.AddTransient<IEquipmentService, EquipmentService>();
             services.AddTransient<IEquipmentTypeService, EquipmentTypeService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IUserService, UserService>();

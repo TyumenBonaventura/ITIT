@@ -7,7 +7,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Growl } from 'primereact/growl';
-import { actionCreators } from '../store/DayOfWeek';
+import { actionCreators } from '../store/DayOfWeek'; 
 
 
 class DayOfWeekPage extends Component {
