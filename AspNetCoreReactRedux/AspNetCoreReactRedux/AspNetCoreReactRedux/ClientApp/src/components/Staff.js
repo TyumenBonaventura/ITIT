@@ -1,30 +1,54 @@
 import React, { Component } from 'react';
+import { withAuth } from '@okta/okta-react';
 
-class Staff extends Component {
-  state = {
-    currentUserName: '',
-    currentUserEmail: ''
-  };
+export default withAuth(class Staff extends Component {
+    state = {
+        currentUserName: '',
+        currentUserEmail: '',
+        currentUserGroups: '',
+    };
 
-  componentDidMount() {
-    const idToken = JSON.parse(localStorage.getItem('okta-token-storage'));
-    this.setState({
-      currentUserEmail: idToken.idToken.claims.email,
-      currentUserName: idToken.idToken.claims.name
-    });
-  }
+    getProfileInfo = async () => {
+        this.props.auth.getUser().then(profile => {
 
-  render() {
-    const { currentUserEmail, currentUserName } = this.state;
+            if (typeof profile === 'undefined') {
 
-    return (
-      <div>
-        <h2>Администратор: {currentUserName}</h2>
-        <p>Email: {currentUserEmail}</p>
-        <p>Вы успешно авторизовались в информационной системе проката спортивного инвентаря SnowMaster.</p>
-      </div>
-    );
-  }
-}
+                this.setState({
+                    currentUserGroups: 'admin',
+                });
 
-export default Staff;
+                window.location.reload(true);
+            }
+            else {
+                const name = profile.name;
+
+                this.setState({
+                    currentUserGroups: name,
+                });
+            }
+        });
+    };
+
+    componentDidMount() {
+        const idToken = JSON.parse(localStorage.getItem('okta-token-storage'));
+
+        this.getProfileInfo();
+
+        this.setState({
+            currentUserEmail: idToken.idToken.claims.email,
+            currentUserName: idToken.idToken.claims.name
+        });
+    }
+
+    render() {
+        const { currentUserEmail, currentUserName/*, currentUserGroups*/ } = this.state;
+
+        return (
+            <div>
+                <h2>Администратор: {currentUserName}</h2>
+                <p>Email: {currentUserEmail}</p>
+                <p>Вы успешно авторизовались в ИС проката спортивного инвентаря SnowMaster.</p>
+            </div>
+        );
+    }
+});

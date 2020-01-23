@@ -11,11 +11,11 @@ class SignInWidget extends Component {
       baseUrl: this.props.baseUrl,
         logo: 'logo.png',
         language: 'ru',
-        i18n: {
+    /*    i18n: {
             ru: {
                 'primaryauth.title': 'SnowMaster'
             }
-        },
+        },*/
     });
 
     this.widget.renderEl({ el }, this.props.onSuccess, this.props.onError);

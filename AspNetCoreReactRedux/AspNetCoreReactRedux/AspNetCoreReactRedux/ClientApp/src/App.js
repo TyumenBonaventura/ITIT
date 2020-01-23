@@ -29,6 +29,7 @@ export default () => (
         <Security issuer='https://yandexitit2019.okta.com/oauth2/default'
           client_id='0oat8nwjeNviWnqmn4x5'
           redirect_uri={window.location.origin + '/implicit/callback'}
+        //  scope={['openid', 'email', 'profile', 'groups']}
           onAuthRequired={onAuthRequired}
         >
             <Route

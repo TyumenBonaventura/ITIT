@@ -31,7 +31,7 @@ export default withAuth(
                 //  isOpen: false,
                 showNav: true,
                 authenticated: null,
-                currentUserName: 'admin',
+                currentUserName: '',
                 //   onHideNav: true
             };
         }
@@ -50,14 +50,39 @@ export default withAuth(
             }
         };
 
-        async componentDidMount() {
-            this.checkAuthentication();
+        getProfileInfo = async () => {
+            this.props.auth.getUser().then(profile => {
 
+                if (typeof profile === 'undefined') {
+
+                    this.setState({
+                        currentUserName: 'admin',
+                    });
+
+                 //   window.location.reload(true);
+                }
+                else {
+                    const name = profile.name;
+
+                    this.setState({
+                        currentUserName: name,
+                    });
+                }
+            });
+        };
+
+        async componentDidMount() {
+          
+            this.checkAuthentication();
+            this.getProfileInfo();
         }
 
         async componentDidUpdate() {
             this.checkAuthentication();
 
+            if ((this.state.currentUserName == '') || (this.state.currentUserName == 'admin')) {
+                this.getProfileInfo();
+            }
         }
 
         login = async () => {
