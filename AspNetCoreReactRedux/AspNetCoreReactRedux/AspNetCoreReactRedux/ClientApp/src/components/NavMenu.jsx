@@ -137,9 +137,9 @@ export default withAuth(
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/doctypes">Типы документов</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/equipment_types">Типы инвентаря</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/age_categories">Возрастные категории</NavLink>,
-                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation_status">Статус бронирования</NavLink>,
-                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/role">Роль пользователя в системе</NavLink>,
-                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/day_of_week">День недели</NavLink>,
+                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation_status">Статусы бронирования</NavLink>,
+                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/role">Роли пользователей в системе</NavLink>,
+                            <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/day_of_week">Дни недели</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/gender">Пол</NavLink>,
                             <NavLink style={{ padding: '5px' }} onClick={() => this.setState({ showNav: false })} tag={Link} to="/reservation_equipment">БронированиеИнвентарь</NavLink>,
                         ]}

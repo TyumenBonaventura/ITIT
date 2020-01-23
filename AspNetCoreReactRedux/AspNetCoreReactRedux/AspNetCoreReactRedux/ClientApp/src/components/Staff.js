@@ -47,7 +47,7 @@ export default withAuth(class Staff extends Component {
             <div>
                 <h2>Администратор: {currentUserName}</h2>
                 <p>Email: {currentUserEmail}</p>
-                <p>Вы успешно авторизовались в ИС проката спортивного инвентаря SnowMaster.</p>
+                <p>Вы успешно авторизовались в ИС проката спортивного инвентаря "SnowMaster".</p>
             </div>
         );
     }
