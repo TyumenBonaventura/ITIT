@@ -114,9 +114,7 @@ class UserPage extends Component {
                     <Column field="userId" header="ID" />
                     <Column field="fio" header="ФИО" />
                     <Column field="roleId" header="Роль в системе" />
-                    <Column field="photo" header="Фото" />
                     <Column field="login" header="Логин" />
-                    <Column field="passwordHash" header="Пароль" />
                 </DataTable>
                 <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Клиент" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
@@ -136,17 +134,9 @@ class UserPage extends Component {
                                     <option key={role.roleId} value={role.roleId}>{role.name}</option>
                                 )}
                             </select>  
-                            <div><label htmlFor="photo">Фото</label></div>
-                            <div>
-                                <InputText id="photo" onChange={(e) => { this.updateProperty('photo', e.target.value) }} value={this.state.user.photo} />
-                            </div>
                             <div><label htmlFor="login">Логин</label></div>
                             <div>
                                 <InputText id="login" onChange={(e) => { this.updateProperty('login', e.target.value) }} value={this.state.user.login} />
-                            </div>
-                            <div><label htmlFor="password">Пароль</label></div>
-                            <div>
-                                <InputText id="passwordHash" onChange={(e) => { this.updateProperty('passwordHash', e.target.value) }} value={this.state.user.passwordHash} />
                             </div>
 
                         </div>

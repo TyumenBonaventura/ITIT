@@ -24,7 +24,7 @@ class ReservationPage extends Component {
             user: [],
             reservationstatus: [],
             doctype: [],
-        }  
+        }
         this.onReservationSelect = this.onReservationSelect.bind(this);
         this.dialogHide = this.dialogHide.bind(this);
         this.addNew = this.addNew.bind(this);
@@ -70,7 +70,7 @@ class ReservationPage extends Component {
 
         reservation[property] = value;
 
-        this.setState({ reservation: reservation});
+        this.setState({ reservation: reservation });
     }
 
     onReservationSelect(e) {
@@ -124,24 +124,24 @@ class ReservationPage extends Component {
             <div>
                 <Growl ref={(el) => this.growl = el} />
                 <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Бронирования</h2>
-                <DataTable value={this.props.reservation} selectionMode="single" header={header} selection={this.state.selectedReservation} onSelectionChange={e => this.setState({ selectedReservation: e.value })} onRowSelect={this.onReservationSelect} paginator={true} rows={10} rowsPerPageOptions={[5, 10, 20]}>
-                    <Column field="reservationId" header="ID" />
-                    <Column field="userId" header="Клиент" />
-                    <Column field="reservationStatusId" header="Статус бронирования" />
-                    <Column field="docTypeId" header="Тип документа" />
-                    <Column field="docNum" header="Номер документа" />
-                    <Column field="dateIssue" header="Дата выдачи" />
-                    <Column field="dateReturn" header="Дата возврата" />
-                    <Column field="cost" header="Стоимость" />
-                    <Column field="comment" header="Комментарий" />
+                <DataTable value={this.props.reservation} selectionMode="single" header={header} selection={this.state.selectedReservation} onSelectionChange={e => this.setState({ selectedReservation: e.value })} onRowSelect={this.onReservationSelect} paginator={true} rows={10} rowsPerPageOptions={[5, 10, 20]} style={{ width: '1220px' }}>
+                    <Column field="reservationId" header="ID"/>
+                    <Column field="userId" header="Клиент"/>
+                    <Column field="reservationStatusId" header="Статус бронирования"/>
+                    <Column field="docTypeId" header="Тип документа"/>
+                    <Column field="docNum" header="Номер документа"/>
+                    <Column field="dateIssue" header="Дата выдачи" style={{ width: '170px' }}/>
+                    <Column field="dateReturn" header="Дата возврата" style={{ width: '170px' }}/>
+                    <Column field="cost" header="Стоимость"/>
+                    <Column field="comment" header="Комментарий"/>
                 </DataTable>
                 <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Бронирование" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
-                        
+
                         this.state.reservation && this.state.user && this.state.reservationstatus && this.state.doctype &&
 
                         <div className="p-grid p-fluid">
-                            
+
                             <div><label htmlFor="userId">Клиент</label></div>
                             <select onChange={(e) => { this.updateProperty('userId', e.target.value) }} value={this.state.reservation.userId}>
                                 {this.props.user.map(user =>
@@ -161,7 +161,7 @@ class ReservationPage extends Component {
                                 {this.props.doctype.map(doctype =>
                                     <option key={doctype.docTypeId} value={doctype.docTypeId}>{doctype.name}</option>
                                 )}
-                            </select>  
+                            </select>
                             <div><label htmlFor="docNum">Номер документа</label></div>
                             <div>
                                 <InputText id="docNum" onChange={(e) => { this.updateProperty('docNum', e.target.value) }} value={this.state.reservation.docNum} />
@@ -199,7 +199,7 @@ function mapStateToProps(state) {
         doctype: state.reservation.doctype,
         loading: state.reservation.loading,
         errors: state.reservation.errors,
-        forceReload:state.reservation.forceReload
+        forceReload: state.reservation.forceReload
     }
 }
 

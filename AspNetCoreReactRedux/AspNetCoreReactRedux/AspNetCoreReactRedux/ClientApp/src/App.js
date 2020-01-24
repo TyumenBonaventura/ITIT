@@ -55,7 +55,7 @@ export default () => (
                 <SecureRoute exact={true} path='/reservation_equipment' component={ReservationEquipmentPage} />
                 <Route path='/implicit/callback' component={ImplicitCallback} />
             </Layout>
-
+            <script src="moment.js"></script>
 
 
         </Security>

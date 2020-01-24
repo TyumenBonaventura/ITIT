@@ -143,7 +143,6 @@ class EquipmentPage extends Component {
                     <Column field="amount" header="Количество на складе" />       
                     <Column field="genderId" header="Пол" />
                     <Column field="ageCategoryId" header="Возрастная категория" />
-                    <Column field="photo" header="Фото" />
                 </DataTable>
                 <Dialog visible={this.state.displayDialog} style={{ 'width': '380px' }} header="Инвентарь" modal={true} footer={dialogFooter} onHide={() => this.setState({ displayDialog: false })}>
                     {
@@ -185,10 +184,6 @@ class EquipmentPage extends Component {
                                     <option key={agecategory.ageCategoryId} value={agecategory.ageCategoryId}>{agecategory.name}</option>
                                 )}
                             </select>
-                            <div><label htmlFor="photo">Фото</label></div>
-                            <div>
-                                <InputText id="photo" onChange={(e) => { this.updateProperty('photo', e.target.value) }} value={this.state.equipment.photo} />
-                            </div>
                         </div>
                     }
                 </Dialog>
