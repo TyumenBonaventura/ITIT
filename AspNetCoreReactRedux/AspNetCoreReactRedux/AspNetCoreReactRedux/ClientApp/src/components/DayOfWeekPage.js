@@ -72,7 +72,7 @@ class DayOfWeekPage extends Component {
     delete() {
         this.props.deleteDayOfWeek(this.state.dayofweek.dayOfWeekId);
         this.dialogHide();
-        this.growl.show({ severity: 'error', detail: "Данные удалены" });
+        this.growl.show({ severity: 'error', detail: "Удалено" });
     }
 
     render() {

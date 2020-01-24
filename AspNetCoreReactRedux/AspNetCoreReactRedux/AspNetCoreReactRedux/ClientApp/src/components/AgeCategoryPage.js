@@ -73,7 +73,7 @@ class AgeCategoryPage extends Component {
     delete() {
         this.props.deleteAgeCategory(this.state.agecategory.ageCategoryId);
         this.dialogHide();
-        this.growl.show({ severity: 'error', detail: "Данные удалены" });
+        this.growl.show({ severity: 'error', detail: "Удалено" });
     }
 
     render() {

@@ -73,7 +73,7 @@ class DocTypePage extends Component {
     delete() {
         this.props.deleteDocType(this.state.doctype.docTypeId);
         this.dialogHide();
-        this.growl.show({ severity: 'error', detail: "Данные удалены" });
+        this.growl.show({ severity: 'error', detail: "Удалено" });
     }
 
     render() {

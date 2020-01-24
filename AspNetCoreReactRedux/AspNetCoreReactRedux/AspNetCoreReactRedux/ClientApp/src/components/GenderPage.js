@@ -73,7 +73,7 @@ class GenderPage extends Component {
     delete() {
         this.props.deleteGender(this.state.gender.genderId);
         this.dialogHide();
-        this.growl.show({ severity: 'error', detail: "Данные удалены" });
+        this.growl.show({ severity: 'error', detail: "Удалено" });
     }
 
     render() {

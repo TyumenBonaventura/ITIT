@@ -73,15 +73,15 @@ class RolePage extends Component {
     delete() {
         this.props.deleteRole(this.state.role.roleId);
         this.dialogHide();
-        this.growl.show({ severity: 'error', detail: "Данные удалены" });
+        this.growl.show({ severity: 'error', detail: "Удалено" });
     }
 
     render() {
 
-        let header = <div className="p-clearfix" style={{ width: '100%' }}>
+     /*   let header = <div className="p-clearfix" style={{ width: '100%' }}>
             <Button style={{ background: 'rgba(0, 170, 204, 1)', float: 'left' }} label="Добавить" onClick={this.addNew} />
-            <ExportCSV csvData={this.props.role} fileName={'Роли пользователей'} />
-        </div>;
+            <ExportCSV csvData={this.props.role} fileName={'Роли пользователей в системе'} />
+        </div>; */
 
         let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button style={{ background: 'rgba(0, 170, 204, 1)' }} label="Сохранить" onClick={this.save} />
@@ -91,8 +91,8 @@ class RolePage extends Component {
         return (
             <div>
                 <Growl ref={(el) => this.growl = el} />
-                <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Роли пользователей</h2>
-                <DataTable value={this.props.role} selectionMode="single" header={header} selection={this.state.selectedRole} onSelectionChange={e => this.setState({ selectedRole: e.value })} onRowSelect={this.onRoleSelect}>
+                <h2 style={{ color: 'rgba(80, 86, 89, 1)', marginBottom: '50px', marginTop: '50px' }}>Роли пользователей в системе</h2>
+                <DataTable value={this.props.role} selectionMode="single" /*header={header}*/ selection={this.state.selectedRole} onSelectionChange={e => this.setState({ selectedRole: e.value })} onRowSelect={this.onRoleSelect}>
                     <Column field="roleId" header="ID" />
                     <Column field="name" header="Наименование" />
                 </DataTable>

@@ -73,7 +73,7 @@ class EquipmentTypePage extends Component {
     delete() {
         this.props.deleteEquipmentType(this.state.equipmenttype.equipmentTypeId);
         this.dialogHide();
-        this.growl.show({ severity: 'error', detail: "Данные удалены" });
+        this.growl.show({ severity: 'error', detail: "Удалено" });
     }
 
     render() {
